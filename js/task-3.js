@@ -467,7 +467,7 @@
 
 // const isOnline = true;
 // const isBlocked2 = false;
-// const canChat2 = isOnline && !isBlocked2; 
+// const canChat2 = isOnline && !isBlocked2;
 // // true && !false -> true && true -> true
 
 // if(canChat2) {
@@ -548,27 +548,142 @@
 // length - довжина нового підрядка
 // Доповни код функції так, щоб вона повертала новий підрядок, який починається від початку string і має довжину length.
 
-function getSubstring(string, length) {
-  return string.slice(0, length);
+// function getSubstring(string, length) {
+//   return string.slice(0, length);
+// }
+
+// console.log(getSubstring("Hello world", 3)) // "Hel"
+// console.log(getSubstring("Hello world", 5)) // "Hello"
+// console.log(getSubstring("Hello world", 8)) // "Hello wo"
+// console.log(getSubstring("Hello world", 11)) // "Hello world"
+// console.log(getSubstring("Hello world", 0)) // ""
+
+
+// console.log('saMsUng' === 'samsung'); // false
+// console.log('saMsUng' === 'SAMSUNG'); // false
+
+
+// const brandName = 'samsung';
+// const userInput = 'saMsUng';
+// const lowercaseInput = userInput.toLowerCase();
+
+// console.log(brandName); // 'samsung'
+// console.log(userInput); // 'saMsUng'
+// console.log(userInput === brandName); // false
+// console.log(lowercaseInput); // 'samsung'
+// console.log(lowercaseInput === brandName); // true
+
+
+// function normalizeInput(input, to) {
+//   if (to === "upper") {
+//     return input.toUpperCase();
+//   } else {
+//     return input.toLowerCase();
+//   }
+// }
+
+// console.log(normalizeInput("This ISN'T SpaM", "upper")); // "THIS ISN'T SPAM"
+// console.log(normalizeInput("This ISN'T SpaM", "lower")); // "this isn't spam"
+
+
+// const username = 'Jacob Mercer';
+
+// console.log(username.includes('Jacob')); // true
+// console.log(username.includes('John')); // false
+// console.log(username.includes('Me')); // true
+// console.log(username.includes('Doe')); // false
+
+
+// const message = "Please buy our stuff!";
+// const hasSpam = message.includes("buy");
+
+// if (hasSpam) {
+//   console.log("Warning: This message contains forbidden words.");
+// } else {
+//   console.log("You can safely open this message.");
+// }
+
+
+function checkForName(fullName, firstName) {
+  return fullName.toLowerCase().includes(firstName.toLowerCase());
+}
+console.log(checkForName("Jason Neis", "Jason")); // true
+console.log(checkForName("Jason Neis", "jAsOn")); // true
+console.log(checkForName("Jason Neis", "Jacob")); // false
+console.log(checkForName("Caty Stars", "Caty")); // true
+console.log(checkForName("Caty Stars", "cAtY")); // true
+console.log(checkForName("Caty Stars", "Andromeda")); // false
+
+
+const str = "Hello, world!";
+
+console.log(str.startsWith("Hello")); // true
+console.log(str.startsWith("hello")); // false (метод чутливий до регістру)
+
+
+function checkFileExtension(fileName, ext) {
+  if (fileName.endsWith(ext)) {
+    return "File extension matches";
+  } else {
+    return "File extension does not match";
+  }
 }
 
-console.log(getSubstring("Hello world", 3)) // "Hel"
-console.log(getSubstring("Hello world", 5)) // "Hello"
-console.log(getSubstring("Hello world", 8)) // "Hello wo"
-console.log(getSubstring("Hello world", 11)) // "Hello world"
-console.log(getSubstring("Hello world", 0)) // ""
+console.log(checkFileExtension("styles.css", ".css")); // "File extension matches"
+console.log(checkFileExtension("styles.css", ".js")); // "File extension does not match"
+console.log(checkFileExtension("app.js", ".js")); // "File extension matches"
+console.log(checkFileExtension("app.js", ".html")); // "File extension does not match"
+console.log(checkFileExtension("index.html", ".html")); // "File extension matches"
+console.log(checkFileExtension("index.html", ".css")); // "File extension does not match"
+console.log(checkFileExtension("index.html", ".js")); // "File extension does not match"
 
 
-console.log('saMsUng' === 'samsung'); // false
-console.log('saMsUng' === 'SAMSUNG'); // false
+// const message = "Welcome to Bahamas!";
+// const index = message.indexOf("to");
+// console.log(index); // 8
 
 
-const brandName = 'samsung';
-const userInput = 'saMsUng';
-const lowercaseInput = userInput.toLowerCase();
+const message = "Welcome to Bahamas!";
+const index = message.indexOf("hello");
+console.log(index); // -1
 
-console.log(brandName); // 'samsung'
-console.log(userInput); // 'saMsUng'
-console.log(userInput === brandName); // false
-console.log(lowercaseInput); // 'samsung'
-console.log(lowercaseInput === brandName); // true
+
+const input = " JavaScript is awesome!    ";
+const trimmedInput = input.trim();
+console.log(trimmedInput); // "JavaScript is awesome!"
+console.log(input); // " JavaScript is awesome!    "
+
+
+// let count = 0;
+
+// while (count < 10) {
+//   console.log(`Count: ${count}`);
+//   count += 4;
+// }
+
+
+let clientCounter = 18;
+const maxClients = 25;
+
+while (clientCounter < maxClients) {
+  console.log(clientCounter);
+  clientCounter += 1;
+}
+
+
+let count = 0;
+
+do {
+	console.log(`Count: ${count}`);
+	count += 1;
+} while (count < 5);
+
+
+for (let i = 0; i <= 20; i += 4) {
+  console.log(i);
+}
+
+
+for (let i = 20; i >= 0; i -= 5) {
+  console.log(i);
+}
