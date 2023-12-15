@@ -12,3 +12,12 @@ console.log(formatMessage("Vestibulum facilisis purus nec", 20)); // "Vestibulum
 console.log(formatMessage("Vestibulum facilisis purus nec", 30)); // "Vestibulum facilisis purus nec"
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)); // "Nunc sed turpis..."
 console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); // "Nunc sed turpis a felis in nunc fringilla"
+
+// ---------- REMARKS OF THE MENTOR ---------- //
+
+// task-2.js - Well executed moments (Добре виконані моменти) //
+
+// Проблема була вирішена правильно, і я ціную твоє рішення включити тести. Вони показують, що функція веде себе, як очікувалося в різних сценаріях, що є відмільною практикою для реального розвитку.
+// Хороше іменування змінних.
+// Чистий і лаконічний код.
+// Включення тестів для демонстрації функціональності
